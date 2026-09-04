@@ -1,0 +1,81 @@
+{
+  "note": "PRIMARY MODEL: predicts real per-lap lap time in seconds using Jolpica timing data. Pit-in laps are excluded because pit entry mechanically distorts lap time. A stint-length proxy is retained in the bundle for backwards compatibility.",
+  "target": "lap_time_s",
+  "selection_criterion": "lowest MAE on validation season 2023",
+  "validation_metrics_by_model": {
+    "linear_regression": {
+      "mae": 16.738603145617052,
+      "rmse": 96.2301748748012,
+      "r2": 0.02356744371262587,
+      "n": 22435
+    },
+    "random_forest": {
+      "mae": 14.04964697046122,
+      "rmse": 98.56711908014795,
+      "r2": -0.024433631379209064,
+      "n": 22435
+    },
+    "xgboost": {
+      "mae": 12.675459920726661,
+      "rmse": 96.22220347787221,
+      "r2": 0.023729206051920304,
+      "n": 22435
+    }
+  },
+  "selected_model": "xgboost",
+  "test_metrics_season_2024": {
+    "mae": 10.338045300672372,
+    "rmse": 53.790717168698464,
+    "r2": -0.32679545225263773,
+    "n": 24718
+  },
+  "real_lap_time_test_metrics_season_2024": {
+    "mae": 10.338045300672372,
+    "rmse": 53.790717168698464,
+    "r2": -0.32679545225263773,
+    "n": 24718
+  },
+  "real_lap_time_test_available": true,
+  "n_train_laps": 94254,
+  "n_val_laps": 22435,
+  "n_test_laps": 24718,
+  "lap_time_coverage_used": 0.9620701854648869,
+  "stint_length_proxy": {
+    "validation_metrics_by_model": {
+      "baseline_mean": {
+        "mae": 8.818153261743005,
+        "rmse": 11.349419628657117,
+        "r2": -0.026726651279348257,
+        "n": 845
+      },
+      "linear_regression": {
+        "mae": 8.645543208039815,
+        "rmse": 11.018830115743073,
+        "r2": 0.032215855696306694,
+        "n": 845
+      },
+      "random_forest": {
+        "mae": 7.626048902215697,
+        "rmse": 10.258438867904342,
+        "r2": 0.16117748793636077,
+        "n": 845
+      },
+      "xgboost": {
+        "mae": 8.614831924438477,
+        "rmse": 11.040689293171843,
+        "r2": 0.028372228145599365,
+        "n": 845
+      }
+    },
+    "selected_model": "random_forest",
+    "test_metrics": {
+      "mae": 8.355691735094496,
+      "rmse": 10.577142617407976,
+      "r2": -0.020552260087733254,
+      "n": 792
+    },
+    "n_train_stints": 2916,
+    "n_val_stints": 845,
+    "n_test_stints": 792
+  }
+}

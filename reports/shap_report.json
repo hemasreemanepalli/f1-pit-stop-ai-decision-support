@@ -1,0 +1,22 @@
+{
+  "model_used": "random_forest",
+  "explainer_type": "tree",
+  "sample_size": 2000,
+  "top_15_features": {
+    "tyre_age": 0.05026,
+    "laps_since_last_pit": 0.04536,
+    "previous_pit_stops": 0.04456,
+    "stint": 0.04167,
+    "tire_compound_HARD": 0.03142,
+    "race_progress": 0.02943,
+    "laps_remaining": 0.02445,
+    "lap": 0.01638,
+    "laps": 0.01284,
+    "humidity_pct": 0.00922,
+    "wind_speed_kmh": 0.008,
+    "track_temp_c": 0.00712,
+    "air_temp_c": 0.00683,
+    "tire_compound_MEDIUM": 0.00423,
+    "circuit_id_circuit_de_monaco": 0.00283
+  }
+}

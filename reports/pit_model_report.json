@@ -1,0 +1,119 @@
+{
+  "validation_metrics_by_model": {
+    "baseline": {
+      "precision": 0.04428571428571428,
+      "recall": 0.036686390532544376,
+      "f1": 0.040129449838187704,
+      "roc_auc": 0.5031538391678252,
+      "pr_auc": 0.03722183173890875,
+      "confusion_matrix": [
+        [
+          21353,
+          669
+        ],
+        [
+          814,
+          31
+        ]
+      ],
+      "threshold": 0.5,
+      "n": 22867,
+      "positive_rate": 0.03695281409891984
+    },
+    "logistic_regression": {
+      "precision": 0.07253973621914102,
+      "recall": 0.5076923076923077,
+      "f1": 0.12694185530403906,
+      "roc_auc": 0.682452539391754,
+      "pr_auc": 0.07829056985515206,
+      "confusion_matrix": [
+        [
+          16537,
+          5485
+        ],
+        [
+          416,
+          429
+        ]
+      ],
+      "threshold": 0.5,
+      "n": 22867,
+      "positive_rate": 0.03695281409891984
+    },
+    "random_forest": {
+      "precision": 0.11083969465648855,
+      "recall": 0.42958579881656805,
+      "f1": 0.1762135922330097,
+      "roc_auc": 0.7066250855115837,
+      "pr_auc": 0.09933722811786351,
+      "confusion_matrix": [
+        [
+          19110,
+          2912
+        ],
+        [
+          482,
+          363
+        ]
+      ],
+      "threshold": 0.5,
+      "n": 22867,
+      "positive_rate": 0.03695281409891984
+    },
+    "xgboost": {
+      "precision": 0.10666666666666667,
+      "recall": 0.39763313609467454,
+      "f1": 0.16821026282853566,
+      "roc_auc": 0.6867052796584803,
+      "pr_auc": 0.08995380633902011,
+      "confusion_matrix": [
+        [
+          19208,
+          2814
+        ],
+        [
+          509,
+          336
+        ]
+      ],
+      "threshold": 0.5,
+      "n": 22867,
+      "positive_rate": 0.03695281409891984
+    }
+  },
+  "selected_model": "random_forest",
+  "selection_criterion": "highest PR-AUC on validation season 2023",
+  "tuned_decision_threshold_from_val_f1": 0.5662945531166441,
+  "test_metrics_season_2024": {
+    "precision": 0.10767627648489059,
+    "recall": 0.39141414141414144,
+    "f1": 0.1688913102696813,
+    "roc_auc": 0.7565498152101985,
+    "pr_auc": 0.11087589246625851,
+    "confusion_matrix": [
+      [
+        21701,
+        2569
+      ],
+      [
+        482,
+        310
+      ]
+    ],
+    "threshold": 0.5662945531166441,
+    "n": 25062,
+    "positive_rate": 0.031601627962652624
+  },
+  "train_seasons": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022
+  ],
+  "val_season": 2023,
+  "test_season": 2024,
+  "n_train": 96393,
+  "n_val": 22867,
+  "n_test": 25062
+}

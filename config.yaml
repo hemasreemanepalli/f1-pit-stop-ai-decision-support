@@ -1,0 +1,41 @@
+# F1 Pit Stop Strategy AI - configuration
+# All paths are relative to the project root (no absolute paths).
+
+paths:
+  raw_csv: "data/raw/f1_pitstops_2018_2024.csv"
+  jolpica_cache_dir: "data/raw/jolpica_cache"
+  processed_dir: "data/processed"
+  models_dir: "models"
+  reports_dir: "reports"
+  figures_dir: "reports/figures"
+
+seasons:
+  start: 2018
+  end: 2024
+
+split:
+  train_seasons: [2018, 2019, 2020, 2021, 2022]
+  val_season: 2023
+  test_season: 2024
+
+jolpica:
+  base_url: "https://api.jolpi.ca/ergast/f1"
+  requests_per_window: 3        # jolpica-f1 public rate limit guidance (be conservative)
+  window_seconds: 1.0
+  timeout_seconds: 15
+  max_retries: 3
+
+pit_model:
+  random_state: 42
+  candidate_models: ["baseline", "logistic_regression", "random_forest", "xgboost"]
+
+degradation_model:
+  random_state: 42
+  target: "stint_length"   # proxy target - see README "Limitations"
+
+optimizer:
+  min_pit_lap_gap: 3        # don't suggest pitting again within N laps of a candidate
+  pit_time_loss_default_s: 22.0  # fallback if no historical estimate is available
+
+logging:
+  level: "INFO"

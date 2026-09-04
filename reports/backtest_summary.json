@@ -1,0 +1,7 @@
+{
+  "n_backtested_driver_races": 397,
+  "mean_abs_lap_difference": 6.662468513853904,
+  "median_abs_lap_difference": 7.0,
+  "pct_historical_lap_in_recommended_window": 0.07556675062972293,
+  "note": "historical_pit_lap_ACTUAL is the real recorded pit lap from the CSV. recommended_pit_lap_SIMULATED is the optimizer's output, computed using only information available up to 3 laps before that real stop, on the 2024 test season the models were never trained/validated on."
+}
